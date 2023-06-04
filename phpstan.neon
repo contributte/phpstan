@@ -1,0 +1,5 @@
+includes:
+	- %currentWorkingDirectory%/vendor/phpstan/phpstan-deprecation-rules/rules.neon
+	- %currentWorkingDirectory%/vendor/phpstan/phpstan-nette/extension.neon
+	- %currentWorkingDirectory%/vendor/phpstan/phpstan-nette/rules.neon
+	- %currentWorkingDirectory%/vendor/phpstan/phpstan-strict-rules/rules.neon

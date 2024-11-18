@@ -18,7 +18,7 @@
     }
   ],
   "require": {
-    "php": ">=8.0",
+    "php": ">=8.2",
     "phpstan/phpstan": "^2.0.1",
     "phpstan/phpstan-strict-rules": "^2.0.0",
     "phpstan/phpstan-nette": "^2.0.0",
@@ -26,7 +26,7 @@
   },
   "require-dev": {
     "contributte/qa": "^0.4",
-    "contributte/tester": "^v0.3.0"
+    "contributte/tester": "^0.3"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
@@ -37,7 +37,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "0.2.x-dev"
+      "dev-master": "0.3.x-dev"
     }
   },
   "config": {

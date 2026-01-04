@@ -1,19 +1,22 @@
-.PHONY: install qa cs csf phpstan tests coverage
-
+.PHONY: install
 install:
 	composer update
 
-qa: phpstan cs
+.PHONY: qa
+qa: cs
 
+.PHONY: cs
 cs:
 ifdef GITHUB_ACTION
-	vendor/bin/phpcs --standard=ruleset.xml --encoding=utf-8 --colors -nsp --extensions=php,phpt -q --report=checkstyle tests | cs2pr
+	vendor/bin/phpcs --standard=ruleset.xml --encoding=utf-8 --colors -nsp --extensions="php,phpt" -q --report=checkstyle tests | cs2pr
 else
-	vendor/bin/phpcs --standard=ruleset.xml --encoding=utf-8 --colors -nsp --extensions=php,phpt tests
+	vendor/bin/phpcs --standard=ruleset.xml --encoding=utf-8 --colors -nsp --extensions="php,phpt" tests
 endif
 
+.PHONY: csf
 csf:
-	vendor/bin/phpcbf --standard=ruleset.xml --encoding=utf-8 --colors -nsp tests
+	vendor/bin/phpcbf --standard=ruleset.xml --encoding=utf-8 --colors -nsp --extensions="php,phpt" tests
 
+.PHONY: tests
 tests:
 	vendor/bin/tester -s -p php --colors 1 -C tests/Cases

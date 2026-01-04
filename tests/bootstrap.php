@@ -8,6 +8,4 @@ if (@!include __DIR__ . '/../vendor/autoload.php') {
 }
 
 // Configure environment
-Environment::setupTester();
-Environment::setupTimezone(Environment::DEFAULT_TIMEZONE);
-Environment::setupFolders(__DIR__);
+Environment::setup(__DIR__);

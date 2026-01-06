@@ -5,6 +5,5 @@
 .travis.yml export-ignore
 Makefile export-ignore
 README.md export-ignore
-phpstan.neon export-ignore
 ruleset.xml export-ignore
 tests export-ignore

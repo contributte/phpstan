@@ -18,17 +18,7 @@
 Website 🚀 <a href="https://contributte.org">contributte.org</a> | Contact 👨🏻‍💻 <a href="https://f3l1x.io">f3l1x.io</a> | Twitter 🐦 <a href="https://twitter.com/contributte">@contributte</a>
 </p>
 
-## Usage
-
-To install latest version of `contributte/phpstan` use [Composer](https://getcomposer.org).
-
-```bash
-composer require --dev contributte/phpstan
-```
-
-## Documentation
-
-For details on how to use this package, check out our [documentation](.docs).
+Opinionated PHPStan setup with strict rules and Contributte/Nette extensions prepared for your projects.
 
 ## Versions
 
@@ -36,6 +26,29 @@ For details on how to use this package, check out our [documentation](.docs).
 |----------|----------|----------|--------|---------|
 |   dev    |  ^0.4.0  |  master  |  3.3+  |  >=8.2  |
 |  stable  |  ^0.3.0  |  master  |  3.3+  |  >=8.2  |
+
+## Installation
+
+To install latest version of `contributte/phpstan` use [Composer](https://getcomposer.org).
+
+```bash
+composer require --dev contributte/phpstan
+```
+
+## Usage
+
+Include our prepared config in your `phpstan.neon`.
+
+```neon
+includes:
+	- vendor/contributte/phpstan/phpstan.neon
+```
+
+Run PHPStan for your codebase.
+
+```bash
+vendor/bin/phpstan src
+```
 
 ## Development
 
